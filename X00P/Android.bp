@@ -173,8 +173,6 @@ cc_prebuilt_library_shared {
 	soc_specific: true,
 }
 
-
-
 android_app_import {
 	name: "WfdService",
 	owner: "asus",
@@ -282,14 +280,3 @@ dex_import {
 	jars: ["proprietary/framework/WfdCommon.jar"],
 }
 
-dex_import {
-        name: "UxPerformance",
-        owner: "asus",
-        jars: ["proprietary/framework/UxPerformance.jar"],
-}
-
-dex_import {
-        name: "QPerformance",
-        owner: "asus",
-        jars: ["proprietary/framework/QPerformance.jar"],
-}
