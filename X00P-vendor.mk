@@ -844,8 +844,13 @@ PRODUCT_PACKAGES += \
     uceShimService \
     ims \
     qcrilmsgtunnel \
-    WfdCommon
-PRODUCT_COPY_FILES += \
+    WfdCommon \
+    FocusAppListener \
+    GameBroadcasterService \
+    HardwareStub \
+    GameBroadcaster \
+    ROGGameCenter
+ PRODUCT_COPY_FILES += \
     vendor/asus/X00P/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service \
     vendor/asus/X00P/proprietary/vendor/bin/mm-qcamera-app:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-app \
     vendor/asus/X00P/proprietary/vendor/bin/mm-qcamera-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-daemon \
@@ -2543,3 +2548,19 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00P/proprietary/vendor/lib64/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideoutils.so \
     vendor/asus/X00P/proprietary/vendor/lib64/vendor.qti.hardware.camera.device@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.device@1.0.so \
     vendor/asus/X00P/proprietary/vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
+# DeviceParts Specific Blobs
+PRODUCT_COPY_FILES += \
+    vendor/asus/X00P/proprietary/etc/hardcore_X1.json:$(TARGET_COPY_OUT_SYSTEM)/etc/hardcore_X1.json \
+    vendor/asus/X00P/proprietary/etc/hardcore_X2.json:$(TARGET_COPY_OUT_SYSTEM)/etc/hardcore_X2.json \
+    vendor/asus/X00P/proprietary/etc/hardcore_X3.json:$(TARGET_COPY_OUT_SYSTEM)/etc/hardcore_X3.json \
+    vendor/asus/X00P/proprietary/etc/hardcore_default.json:$(TARGET_COPY_OUT_SYSTEM)/etc/hardcore_default.json \
+    vendor/asus/X00P/proprietary/etc/permissions/asus.software.gamewidget.zenui.rog2.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/asus.software.gamewidget.zenui.rog2.xml \
+    vendor/asus/X00P/proprietary/etc/permissions/asus.software.zenui.rog.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/asus.software.zenui.rog.xml \
+    vendor/asus/X00P/proprietary/etc/permissions/asus.software.zenui.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/asus.software.zenui.xml \
+    vendor/asus/X00P/proprietary/etc/sysconfig/ims-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/ims-hiddenapi-package-whitelist.xml \
+    vendor/asus/X00P/proprietary/lib/libAsusFRGBSensorHAL.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libAsusFRGBSensorHAL.so \
+    vendor/asus/X00P/proprietary/lib/libAsusRGBSensorHAL.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libAsusRGBSensorHAL.so \
+    vendor/asus/X00P/proprietary/lib64/libAsusFRGBSensorHAL.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libAsusFRGBSensorHAL.so \
+    vendor/asus/X00P/proprietary/lib64/libAsusRGBSensorHAL.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libAsusRGBSensorHAL.so \
+    vendor/asus/X00P/proprietary/priv-app/GameBroadcaster/lib/arm64/libJniModule.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/GameBroadcaster/lib/arm64/libJniModule.so
